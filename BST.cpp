@@ -30,7 +30,7 @@ public:
 	//or
 	void setright(datatype v) { right = new TreeNode<datatype>(v); }
 	bool isleaf() { return (left == NULL && right == NULL); }
-	TreeNode *InOrderSuccessor_left()
+	TreeNode<datatype> *InOrderSuccessor()
 	{
 		TreeNode * leftmostrightsubtree = right;
 		while (leftmostrightsubtree->left != NULL)
@@ -39,7 +39,7 @@ public:
 		}
 		return leftmostrightsubtree;
 	}
-	TreeNode *InOrderSuccessor_right()
+	TreeNode<datatype> *InOrderPredecessor()
 	{
 		TreeNode * rightmostleftsubtree = left;
 		while (rightmostleftsubtree->right != NULL)
